@@ -101,9 +101,11 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import img from "./x.jpg";
 import img1 from "./Group5.png";
 import "../index.css";
+import { useNavigate } from "react-router-dom";
 
 const RegistrationForm = () => {
   const [formVisible, setFormVisible] = useState(true);
+  const navigate = useNavigate();
 
   const handleNextClick = () => {
     setFormVisible(false);
@@ -258,7 +260,9 @@ const RegistrationForm = () => {
                   variant="contained"
                   color="primary"
                   endIcon={<ArrowForwardIcon />}
-                  onClick={handleNextClick}
+                  onClick={()=>{
+                    navigate("/Card");
+                  }}
                 >
                   Next
                 </Button>
