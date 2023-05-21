@@ -1,4 +1,5 @@
 import RegistrationForm from "./pages/Registration-Form";
+import Dashboard from "./pages/Dashboard";
 import Card from "./pages/Food"
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom"
@@ -9,7 +10,8 @@ function App() {
       <BrowserRouter>
       
       <Routes>
-          <Route path="/" element={<RegistrationForm />}></Route>
+          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/Register" element={<RegistrationForm />}></Route>
           <Route path="/Card" element={<Card/>}></Route>
         </Routes>
       </BrowserRouter>
